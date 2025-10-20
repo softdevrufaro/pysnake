@@ -1,0 +1,110 @@
+# SNAKE GAME PROJECT DOCUMENTATION
+
+## Project Overview
+This is a classic Snake game implementation using Python and Pygame. The player controls a snake that moves around the screen, eating fruits to grow longer. The game ends if the snake bites itself.
+
+## Project Structure
+- `main.py` - Main game file containing the primary game loop and logic
+- `snake.py` - Snake class implementation with movement, growth, and collision detection
+- `fruit.py` - Fruit class for food objects
+- `UI.py` - User interface components (Buttons and Labels)
+- `Notes.txt` - Development notes and project planning
+- `testing.py` - Simple test file (not part of main game)
+
+## Game Components
+
+### Snake Class
+**File:** `snake.py`
+- **Head**: Main component that determines movement direction
+- **Tail**: List of nodes that follow the head's movement
+- **Movement**: Grid-based movement with wraparound screen edges
+- **Growth**: Adds new node to tail when eating fruit
+- **Collision Detection**: Checks if head collides with tail (game over)
+
+### Fruit Class
+**File:** `fruit.py`
+- **Position**: Grid coordinates of the fruit
+- **Visual**: Purple square rendered on screen
+- **Consumption**: Disappears when snake head collides with it
+
+### UI Components
+**File:** `UI.py`
+- **Button Class**: Interactive buttons with hover detection
+- **Label Class**: Text display elements
+
+## Game Flow
+
+### 1. Start Menu
+- **Play**: Starts the main game
+- **Help**: Shows game instructions
+- **Quit**: Exits the application
+
+### 2. Gameplay
+- **Movement**: Arrow keys control snake direction
+- **Objective**: Eat purple fruits to grow longer
+- **Scoring**: Each fruit eaten increases score by 1
+- **Game Over**: Occurs when snake bites itself
+
+### 3. Help Screen
+Displays game instructions and controls
+
+### 4. Game Over Screen
+- Shows final score
+- **Restart**: Begins new game
+- **Quit**: Exits application
+
+## How to Play
+
+### Controls
+- **UP Arrow** - Move snake up
+- **DOWN Arrow** - Move snake down
+- **LEFT Arrow** - Move snake left
+- **RIGHT Arrow** - Move snake right
+- **SPACE** - Quit game (alternative method)
+- **Mouse** - Click buttons in menus
+
+### Game Rules
+1. **Movement**: Snake moves continuously in the current direction
+2. **Eating**: When snake head touches a purple fruit:
+   - Snake grows by one segment
+   - Score increases by 1 point
+   - New fruit spawns randomly
+3. **Boundaries**: Snake wraps around screen edges
+4. **Collision**: Game ends if snake head touches its own tail
+5. **Fruit Spawning**: New fruits appear every 5 seconds if less than 5 fruits exist
+
+### Scoring
+- **1 point** per fruit eaten
+- Score displayed in top-left corner during gameplay
+- Final score shown on Game Over screen
+
+## Technical Details
+
+### Screen Dimensions
+- **Resolution**: 800 x 600 pixels
+- **Grid Size**: 80 x 60 cells (10x10 pixels per cell)
+
+### Colors
+- **Snake Head**: Red
+- **Snake Tail**: Green
+- **Fruit**: Purple
+- **Background**: Yellow
+- **UI Elements**: Black text on white buttons
+
+### Timing
+- **Movement Speed**: Controlled by interval (0.25 seconds)
+- **Fruit Spawn**: Every 5 seconds when fruits count is below 5
+
+## Setup and Requirements
+- Python 3.x
+- Pygame library
+- Install dependencies: `pip install pygame`
+
+## Running the Game
+1. Navigate to project directory
+2. Run: `python main.py`
+3. Use arrow keys to control the snake
+4. Try to achieve the highest score without biting yourself!
+
+## Development Notes
+Based on the included `Notes.txt`, this project was developed with careful planning of game objects and UI components, following standard game development practices for a classic Snake implementation.

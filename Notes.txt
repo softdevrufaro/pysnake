@@ -1,0 +1,40 @@
+Welcome to the notes for this pygame snake project.
+These notes will help guide the process for developing the project 
+
+Game objects
+
+Snake:
+	Type : actor
+	Function : A player controlled object that will behave differently according to player input and interactions with other objects,
+				Giving the player feedback as a result
+	Components: 
+		Head: The main component of the snake that will determine the direction the snake is moving as well as the component of the snake that, 
+				will collide with fruit objects and other obstacles as well
+		tail: The secondary component of the snake that will act in response to the actions of the head. It is comprised of multiple node objects that 
+				will move towards the location of the node ahead of them causing the snake to move.
+
+Fruit:
+	Type : static object(goal)
+	Function: A stationary object that will spawn in the world randomly. It is the goal for the snake to eat so it can grow in size.
+	Components:
+		Body: The Fruit is composed of a single body that will detect collisions and then disappear after being eaten by the snake.
+
+Game UI 
+
+Start menu:
+	Function: The first UI that the player will see on starting the game.
+	Options:
+		Start: A button that will start the game
+		Help : A button that will open the window to show how the game is to be played
+		Quit : A button that will close the game
+
+Help Screen: 
+	Function: The UI that will teach the player how to play the game.
+	Options: 
+		Back to Main Menu: A button that will take the player back to the main menu
+
+Game Over Screen:
+	Function : The UI will appear when the player loses. 
+	Options: 
+		Quit: This button will close the game.
+		Restart: This button will restart the game all over again.
